@@ -1,0 +1,173 @@
+/* Global Styles */
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+nav li {
+	float: left;
+}
+
+nav a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #111;
+}
+
+main {
+	margin-top: 80px;
+	padding: 50px;
+}
+
+section {
+	margin-bottom: 50px;
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+h2 {
+	border-bottom: 2px solid #333;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+/* Banner Section Styles */
+
+#banner {
+	background-image: url('code_pic.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: rgb(255, 255, 255);
+	text-shadow: 1px 1px #ffffff;
+}
+
+/*
+this is for some animations but it's still laggy
+#banner-header {
+    font-size: 72px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #fff, 0 0 80px #ff0066, 0 0 120px #ff0066, 0 0 160px #ff0066, 0 0 200px #ff0066;
+    animation: neon 5.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff0066, 0 0 70px #ff0066, 0 0 80px #ff0066, 0 0 100px #ff0066;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 60px #ff0066, 0 0 90px #ff0066, 0 0 100px #ff0066, 0 0 150px #ff0066;
+    }
+}*/
+
+#banner h1 {
+	font-size: 50px;
+	margin: 0;
+}
+
+#banner p {
+	font-size: 24px;
+	margin-top: 20px;
+}
+
+/* Project Section Styles */
+
+.project {
+	background-color: #dad9d9;
+	padding: 20px;
+	box-shadow: 2px 2px #0c0101;
+}
+
+.project h3 {
+	margin-top: 0;
+}
+
+
+/* Contact Section Styles */
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: none;
+	box-shadow: 2px 2px #ccc;
+}
+
+input[type="submit"] {
+	padding: 10px;
+	border: none;
+	background-color: #939191;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+	background-color: #e44545;
+}
+
+/* Animations */
+
+section:not(#banner) {
+	opacity: 1;
+	transform: translateY(50px);
+	transition: all 5s ease-in-out;
+}
+
+section:not(#banner).show {
+	opacity: 1;
+	transform: translateY(0);
+}
